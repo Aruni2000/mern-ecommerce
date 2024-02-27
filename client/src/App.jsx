@@ -1,8 +1,19 @@
-import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
+import Sellyourspices from './pages/Sellyourspices';
 
 export default function App() {
   return (
-    <div>App</div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/sign-in' element={<SignIn />} />
+        <Route path='/sign-up' element={<SignUp />} />
+        <Route path='/sellyourspices' element={<Sellyourspices />} />
+  
+      </Routes>
+    </BrowserRouter>
+  );
 }
-//hhgdgfg
