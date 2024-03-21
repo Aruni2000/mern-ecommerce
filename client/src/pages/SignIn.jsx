@@ -10,7 +10,7 @@ import {
 export default function SignUp() {
   const [formData, setFormData] = useState({});
   const { loading, error } = useSelector((state) => state.user);
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
   const dispatch = useDispatch();
   const handleChange = (e) => {
     setFormData({
@@ -22,7 +22,7 @@ export default function SignUp() {
     e.preventDefault();
     try {
       dispatch(signInStart());
-      const res = await fetch('/api/auth/signup', {
+      const res = await fetch('/api/auth/sign-up', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ export default function SignUp() {
   };
   return (
     <div className='p-3 max-w-lg mx-auto'>
-      <h1 className='text-3xl text-center font-semibold my-7'>Sign In</h1>
+      <h1 className='text-3xl text-center font-semibold my-7'>LogIn</h1>
       <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
         <input
           type='email'
@@ -64,7 +64,7 @@ export default function SignUp() {
           disabled={loading}
           className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80'
         >
-          {loading ? 'Loading...' : 'Sign In'}
+          {loading ? 'Loading...' : 'LOGIN'}
         </button>
       
       </form>
