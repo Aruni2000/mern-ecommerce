@@ -42,6 +42,7 @@ export default function Header() {
                 SignUp
                 </li>
                 </Link>
+    
                 
                 <Link to='/profile'>
                   {currentUser ? (
