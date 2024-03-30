@@ -42,6 +42,8 @@ export default function Header() {
                 SignUp
                 </li>
                 </Link>
+                
+             
     
                 
                 <Link to='/profile'>
@@ -51,9 +53,16 @@ export default function Header() {
                     alt='profile' />
                   ) : (
                     <li className='text-yellow-600 
-                    hover:underline' > Profile </li>
+                    hover:underline' > login </li>
                   )}
                 </Link>
+                
+                <Link to='/profile'>
+            <li className='hidden sm:inline text-yellow-600 hover:underline'>
+                Profile
+                </li>
+                </Link>
+    
                
         </ul>
         </div>
