@@ -17,12 +17,15 @@ export default function CreateListing() {
     imageUrls: [],
     name: '',
     description: '',
-    type: 'category',
-    filterbyPrice: 50,
+    address: '',
+    type: 'rent',
+    bedrooms: 1,
+    bathrooms: 1,
+    regularPrice: 50,
+    discountPrice: 0,
     offer: false,
-    organicspices: false,
-    spicesgiftbox: false,
-    wholespices: false,
+    parking: false,
+    furnished: false,
   });
   const [imageUploadError, setImageUploadError] = useState(false);
   const [uploading, setUploading] = useState(false);
@@ -90,7 +93,7 @@ export default function CreateListing() {
   };
 
   const handleChange = (e) => {
-    if (e.target.id === 'organicspices' || e.target.id === 'spicesgiftbox') {
+    if (e.target.id === 'sale' || e.target.id === 'rent') {
       setFormData({
         ...formData,
         type: e.target.id,
@@ -98,7 +101,8 @@ export default function CreateListing() {
     }
 
     if (
-    
+      e.target.id === 'parking' ||
+      e.target.id === 'furnished' ||
       e.target.id === 'offer'
     ) {
       setFormData({
@@ -108,6 +112,8 @@ export default function CreateListing() {
     }
 
     if (
+      e.target.type === 'number' ||
+      e.target.type === 'text' ||
       e.target.type === 'textarea'
     ) {
       setFormData({
@@ -150,7 +156,7 @@ export default function CreateListing() {
   return (
     <main className='p-3 max-w-4xl mx-auto'>
       <h1 className='text-3xl font-semibold text-center my-7'>
-        Add Product Item
+        Create a Listing
       </h1>
       <form onSubmit={handleSubmit} className='flex flex-col sm:flex-row gap-4'>
         <div className='flex flex-col gap-4 flex-1'>
@@ -176,7 +182,7 @@ export default function CreateListing() {
           />
           <input
             type='text'
-            placeholder='Quantity'
+            placeholder='Address'
             className='border p-3 rounded-lg'
             id='address'
             required
@@ -187,33 +193,43 @@ export default function CreateListing() {
             <div className='flex gap-2'>
               <input
                 type='checkbox'
-                id='organicspices'
+                id='sale'
                 className='w-5'
                 onChange={handleChange}
-                checked={formData.type === 'organicspices'}
+                checked={formData.type === 'sale'}
               />
-              <span>Organic Spices</span>
+              <span>Sell</span>
             </div>
             <div className='flex gap-2'>
               <input
                 type='checkbox'
-                id='spicesgiftbox'
+                id='rent'
                 className='w-5'
                 onChange={handleChange}
-                checked={formData.type === 'spicesgiftbox'}
+                checked={formData.type === 'rent'}
               />
-              <span>Spices Gift Box</span>
+              <span>Rent</span>
             </div>
             <div className='flex gap-2'>
               <input
                 type='checkbox'
-                id='wholespices'
+                id='parking'
                 className='w-5'
                 onChange={handleChange}
-                checked={formData.wholespices}
+                checked={formData.parking}
               />
-              <span>Whole Spices</span>
-            
+              <span>Parking spot</span>
+            </div>
+            <div className='flex gap-2'>
+              <input
+                type='checkbox'
+                id='furnished'
+                className='w-5'
+                onChange={handleChange}
+                checked={formData.furnished}
+              />
+              <span>Furnished</span>
+            </div>
             <div className='flex gap-2'>
               <input
                 type='checkbox'
@@ -225,23 +241,48 @@ export default function CreateListing() {
               <span>Offer</span>
             </div>
           </div>
-          
-            
+          <div className='flex flex-wrap gap-6'>
             <div className='flex items-center gap-2'>
               <input
                 type='number'
-                id='filterbyPrice'
+                id='bedrooms'
+                min='1'
+                max='10'
+                required
+                className='p-3 border border-gray-300 rounded-lg'
+                onChange={handleChange}
+                value={formData.bedrooms}
+              />
+              <p>Beds</p>
+            </div>
+            <div className='flex items-center gap-2'>
+              <input
+                type='number'
+                id='bathrooms'
+                min='1'
+                max='10'
+                required
+                className='p-3 border border-gray-300 rounded-lg'
+                onChange={handleChange}
+                value={formData.bathrooms}
+              />
+              <p>Baths</p>
+            </div>
+            <div className='flex items-center gap-2'>
+              <input
+                type='number'
+                id='regularPrice'
                 min='50'
                 max='10000000'
                 required
                 className='p-3 border border-gray-300 rounded-lg'
                 onChange={handleChange}
-                value={formData.filterbyPrice}
+                value={formData.regularPrice}
               />
               <div className='flex flex-col items-center'>
-                <p>Filter By Price</p>
+                <p>Regular price</p>
                 {formData.type === 'rent' && (
-                  <span className='text-xs'>($ )</span>
+                  <span className='text-xs'>($ / month)</span>
                 )}
               </div>
             </div>
@@ -255,9 +296,15 @@ export default function CreateListing() {
                   required
                   className='p-3 border border-gray-300 rounded-lg'
                   onChange={handleChange}
-                  value={formData.filterbyPrice}
+                  value={formData.discountPrice}
                 />
-  
+                <div className='flex flex-col items-center'>
+                  <p>Discounted price</p>
+
+                  {formData.type === 'rent' && (
+                    <span className='text-xs'>($ / month)</span>
+                  )}
+                </div>
               </div>
             )}
           </div>
@@ -312,9 +359,9 @@ export default function CreateListing() {
             ))}
           <button
             disabled={loading || uploading}
-            className='p-3 bg-yellow-900 text-white rounded-lg uppercase hover:opacity-95 disabled:opacity-80'
+            className='p-3 bg-slate-700 text-white rounded-lg uppercase hover:opacity-95 disabled:opacity-80'
           >
-            {loading ? 'Adding...' : 'Add product Item'}
+            {loading ? 'Creating...' : 'Create listing'}
           </button>
           {error && <p className='text-red-700 text-sm'>{error}</p>}
         </div>
