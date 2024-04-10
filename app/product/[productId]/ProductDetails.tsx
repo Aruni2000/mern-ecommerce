@@ -1,19 +1,49 @@
 "use client";
 
 import { Rating } from "@mui/material";
+import exp from "constants";
+import { useState } from "react";
 
 interface ProductDetailsProps{
     product: any;
 }
+export type CartProductType = {
+    name: string,
+    description: string,
+    category: string,
+    selectedImg: SelectedImgType,
+    quantity: number,
+    price: number
+}
+
+
+
+export type SelectedImgType ={
+    image: string
+}
+
 
 const Horizontal = () => {
     return <hr className="w-[30%] my-2"/>
 };
 
 
+
 const ProductDetails: React.FC<ProductDetailsProps> =
 ({ product }) => {
-    
+
+    const [cartProduct, setCardProduct] =
+    useState<CartProductType>({
+    id: product.string,
+    name: product.string,
+    description: product.string,
+    category: product.string,
+    selectedImg: product.SelectedImgType,
+    quantity: 1,
+    price: product.number
+
+} );
+
     const productRating = product.reviews.reduce
     ((acc:number, item:any) => item.rating + acc, 0) /
     product.reviews.length
@@ -44,6 +74,10 @@ const ProductDetails: React.FC<ProductDetailsProps> =
               <div className={product.inStock ?
                 "text-teal-400" : "text-rose-400"}>
               {product.inStock ? "In stock" : "Out of stock"}
+              </div>
+              <Horizontal/>
+              <div>
+                quantity
               </div>
               <Horizontal/>
               <div>Add to cart</div>
