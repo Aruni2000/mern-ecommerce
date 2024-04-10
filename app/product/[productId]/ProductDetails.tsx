@@ -1,8 +1,9 @@
 "use client";
 
+import SetQuanity from "@/app/components/products/SetQuanity";
 import { Rating } from "@mui/material";
 import exp from "constants";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 interface ProductDetailsProps{
     product: any;
@@ -32,7 +33,7 @@ const Horizontal = () => {
 const ProductDetails: React.FC<ProductDetailsProps> =
 ({ product }) => {
 
-    const [cartProduct, setCardProduct] =
+    const [cartProduct, setCartProduct] =
     useState<CartProductType>({
     id: product.string,
     name: product.string,
@@ -46,7 +47,26 @@ const ProductDetails: React.FC<ProductDetailsProps> =
 
     const productRating = product.reviews.reduce
     ((acc:number, item:any) => item.rating + acc, 0) /
-    product.reviews.length
+    product.reviews.length;
+
+    const handleQtyIncrease = useCallback(() => {
+        if(cartProduct.quantity === 99){
+            return;
+        }
+        setCartProduct((prev) => {
+            return { ...prev, quantity: --prev.quantity };
+        });
+    }, [cartProduct]);
+
+    const handleQtyDecrease = useCallback(() => {
+        if(cartProduct.quantity === 1){
+            return;
+        }
+
+        setCartProduct((prev) => {
+            return { ...prev, quantity: ++prev.quantity };
+        });
+    }, [cartProduct]);
 
     return (
     <div className="grid grid-cols-1 md:grid-cols-2
@@ -76,9 +96,10 @@ const ProductDetails: React.FC<ProductDetailsProps> =
               {product.inStock ? "In stock" : "Out of stock"}
               </div>
               <Horizontal/>
-              <div>
-                quantity
-              </div>
+              <SetQuanity
+                cartProduct={cartProduct}
+                handleQtyDecrease={handleQtyIncrease}
+                handleQtyIncrease={handleQtyDecrease}/>
               <Horizontal/>
               <div>Add to cart</div>
 
