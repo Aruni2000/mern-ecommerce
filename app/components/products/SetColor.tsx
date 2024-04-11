@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-import { CartProductType, SelectedImgType } from "@/app/product/[productId]/ProductDetails";
-
+import { CartProductType,SelectedImgType } from "@/app/product/ProductDetails";
 
 interface SetColorProps {
     images: SelectedImgType[];
@@ -36,7 +35,7 @@ const SetColor: React.FC<SetColorProps>= ({
                                 `}
                             >
                                 <div 
-                                    style={{ background: image.color}} className="h-3 w-3 rounded-full border-[1.2px] border-slate-300 cursor-pointer"
+                                    style={{ background: image.color}} className="h-3 w-3 rounded-full border-[1.2px] border-slate-400 cursor-pointer"
                                 ></div>
                             </div>
                         );

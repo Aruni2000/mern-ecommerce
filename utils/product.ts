@@ -1,41 +1,28 @@
 export const product = {
-    
-        id: "64a4ebe300900d44bb50628a",
-      name: "Black Pepper Bold 500 gm",
-      description:
-        "This black pepper is from the Idukki district of Kerala. The places in the Idukki district are famous for black pepper production. Idukki black pepper has higher quality, in terms of oil content, spiciness, and high litter weight.",
-      price: 102.99,
-      category: "spices",
-      weight: "25g",
-      inStock: true,
-      images: [
-        {
-          color: "Black",
-          colorCode: "#000000",
-          image:
-            "https://www.keralaspicesonline.com/wp-content/uploads/2023/10/DSC06578-jpg.webp",
-        },
-      ],
-      reviews: [
-        {
-          id: "64a65a6158b470c6e06959ee",
-          userId: "6475af156bad4917456e6e1e",
-          productId: "64a4ebe300900d44bb50628a",
-          rating: 5,
-          comment: "good",
-          createdDate: "2023-07-06T06:08:33.067Z",
-          user: {
-            id: "6475af156bad4917456e6e1e",
-            name: "Charles",
-            email: "example@gmail.com",
-            emailVerified: null,
-            image:
-              "https://lh3.googleusercontent.com/a/AAcHTteOiCtILLBWiAoolIW9PJH-r5825pBDl824_8LD=s96-c",
-            hashedPassword: null,
-            createdAt: "2023-05-30T08:08:53.979Z",
-            updatedAt: "2023-05-30T08:08:53.979Z",
-            role: "ADMIN",
-          },
-        },
-      ],
+
+  id: "64a654593e91b8e73a351e9b",
+  name: "Cardamom ( 8mm Large in size)",
+  description: "Cardamom is the queen of spices and cardamom 8mm is the larger in the cardamom category. This graded cardamom is specially graded in an 8mm filter. Most of them are handpicked after machine or filter grading.",
+  price: 2999,
+  category: "spices",
+  weight: "25g",
+  inStock: true,
+  images: [
+    {
+      color: "White",
+      colorCode: "#FFFFFF",
+      image:
+        "https://www.keralaspicesonline.com/wp-content/uploads/2023/10/DSC06551-jpg.webp",
+    },
+    {
+      color: "Gray",
+      colorCode: "#808080",
+      image:
+        "https://www.keralaspicesonline.com/wp-content/uploads/2022/03/DSC06553-scaled.jpg.webp",
+    },
+  ],
+  reviews: [],
+
+  
     }
+  
