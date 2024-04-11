@@ -5,6 +5,7 @@ export const products = [
       description: "Cardamom is the queen of spices and cardamom 8mm is the larger in the cardamom category. This graded cardamom is specially graded in an 8mm filter. Most of them are handpicked after machine or filter grading.",
       price: 2999,
       category: "spices",
+      weight: "25g",
       inStock: true,
       images: [
         {
@@ -29,6 +30,7 @@ export const products = [
         "This black pepper is from the Idukki district of Kerala. The places in the Idukki district are famous for black pepper production. Idukki black pepper has higher quality, in terms of oil content, spiciness, and high litter weight.",
       price: 102.99,
       category: "spices",
+      weight: "25g",
       inStock: true,
       images: [
         {
@@ -68,6 +70,7 @@ export const products = [
         'Cumin Seeds are the incredible flavorful spice that can be used in many heart-healthy, low-cholesterol recipes. It’s relatively easy to add to entrees, grains, and side dishes for a rich, flavorful dose of cumin.',
       price: 40,
       category: "spices",
+      weight: "25g",
       inStock: true,
       images: [
         {
@@ -134,6 +137,7 @@ export const products = [
         "It is a traditional Indian spice used in every household of India for infusing a smoky flavor to food items.It helps to maintaining good heart health as well",
       price: 70,
       category: "spices",
+      weight: "25g",
       inStock: true,
       images: [
         {

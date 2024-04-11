@@ -6,6 +6,7 @@ export const product = {
         "This black pepper is from the Idukki district of Kerala. The places in the Idukki district are famous for black pepper production. Idukki black pepper has higher quality, in terms of oil content, spiciness, and high litter weight.",
       price: 102.99,
       category: "spices",
+      weight: "25g",
       inStock: true,
       images: [
         {
