@@ -1,6 +1,6 @@
 export const products = [
   {
-      id: "ahddcbdwe2133",
+      id: "ahddsdvdfwe2133",
       name: "Cardamom (8mm Large in size)",
       description: "",
       price: 40,
@@ -12,53 +12,66 @@ export const products = [
             color: "gary",
             colorCode: "#808080",
             image:
-              "https://www.keralaspicesonline.com/wp-content/uploads/2023/10/DSC06578-jpg.webp",
+              "https://www.keralaspicesonline.com/wp-content/uploads/2023/10/DSC06551-jpg.webp",
           },
-          {
-            color: "Gray",
-            colorCode: "#808080",
-            image:
-              "https://www.keralaspicesonline.com/wp-content/uploads/2023/10/DSC06578-jpg.webp",
-          },
-      ],
-      reviews: []
-  },
-  {
-      id: "bdwscsdcdfvfbw",
-      name: "Black Pepper Bold",
-      description: "Black pepper Bold is larger in size than normal black pepper. This bold size black pepper is specially handpicked, graded, and higher in quality.",
-      price: 50,
-      category: "spices",
-      weight: "100gm",
-      inStock: true,
-      images: [
-          {
-              image: "https://www.keralaspicesonline.com/wp-content/uploads/2023/10/DSC06578-jpg.webp"
-          }
       ],
       reviews: [
-          {
-              id: "uwbdwbwdbubcscscwdKQWD21213",
-              userId: "21w2343rgrghty",
-              productId: "bdwfbw", // Corrected productId
-              rating: 4,
-              comment: "Quality as expected and promised. Quick and hassle-free delivery. I think this is what we all expect. Thank you so much.",
-              createDate: "2024-02-26T15:53:44.483Z", // Corrected createDate
-              user: {
-                  id: "dvhwcdcjhwvdhjc",
-                  name: "3234r4t4grht",
-                  email: "nethminiaruni@gmail.com",
-                  emailVerified: null,
-                  image: "", // Corrected image
-                  hashedPassword: null,
-                  createdAt: "2024-02-26T15:40:52.558Z", // Corrected createdAt
-                  updatedAt: "2024-02-26T15:40:52.558Z", // Corrected updatedAt
-                  role: "USER"
-              }
-          }
+        {
+            id: "uwbdwcscwdKQWD21213",
+            userId: "21w2343rfgrghty",
+            productId: "bdwfbw", // Corrected productId
+            rating: 4,
+            comment: "Quality as expected and promised. Quick and hassle-free delivery. I think this is what we all expect. Thank you so much.",
+            createDate: "2024-02-26T15:53:44.483Z", // Corrected createDate
+            user: {
+                id: "dvhwcdcjhwvdhjc",
+                name: "3234r4t4grht",
+                email: "nethminiaruni@gmail.com",
+                emailVerified: null,
+                image: "", // Corrected image
+                hashedPassword: null,
+                createdAt: "2024-02-26T15:40:52.558Z", // Corrected createdAt
+                updatedAt: "2024-02-26T15:40:52.558Z", // Corrected updatedAt
+                role: "USER"
+            }
+        }
       ]
-      
   },
+  {
+    id: "ahbknkndwcscsce2133",
+    name: "Black Cardamom",
+    description: "It is a traditional Indian spice used in every household of India for infusing a smoky flavor to food items.",
+    price: 22,
+    category: "spices",
+    weight: "100gm",
+    inStock: true,
+    images: [
+        {
+            image: "https://www.keralaspicesonline.com/wp-content/uploads/2021/03/DSC06956-jpg.webp"
+        }
+    ],
+    reviews: [
+      {
+          id: "uwbsdscscwdcdvdwbwdb21213",
+          userId: "21w2343rty",
+          productId: "bdwfegbw", // Corrected productId
+          rating: 4,
+          comment: "good.",
+          createDate: "2024-02-26T15:53:44.483Z", // Corrected createDate
+          user: {
+              id: "dvhwjdchwvdhjc",
+              name: "3234r4t4grht",
+              email: "nethminiaruni@gmail.com",
+              emailVerified: null,
+              image: "", // Corrected image
+              hashedPassword: null,
+              createdAt: "2024-02-26T15:40:52.558Z", // Corrected createdAt
+              updatedAt: "2024-02-26T15:40:52.558Z", // Corrected updatedAt
+              role: "Admin"
+          },
+      },
+    ]
+},
   {
       id: "ahbsdcscdwe2133",
       name: "Cumin Seeds 250g",
@@ -108,7 +121,27 @@ export const products = [
               image: "https://www.keralaspicesonline.com/wp-content/uploads/2021/03/DSC06956-jpg.webp"
           }
       ],
-      reviews: []
+      reviews: [
+        {
+            id: "uwbsdscscwdcdvdwbwdb21213",
+            userId: "21w2343rty",
+            productId: "bdwfegbw", // Corrected productId
+            rating: 4,
+            comment: "good.",
+            createDate: "2024-02-26T15:53:44.483Z", // Corrected createDate
+            user: {
+                id: "dvhwjdchwvdhjc",
+                name: "3234r4t4grht",
+                email: "nethminiaruni@gmail.com",
+                emailVerified: null,
+                image: "", // Corrected image
+                hashedPassword: null,
+                createdAt: "2024-02-26T15:40:52.558Z", // Corrected createdAt
+                updatedAt: "2024-02-26T15:40:52.558Z", // Corrected updatedAt
+                role: "Admin"
+            },
+        },
+      ]
   },
   {
       id: "ahbdwe2cscscsccsc133",

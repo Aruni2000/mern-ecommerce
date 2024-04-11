@@ -1,6 +1,5 @@
 import { product } from "@/utils/product";
 import Container  from "@/app/components/Container";
-import ProductDetails from "./ProductDetails";
 
 interface IPrams {
     productId?: string;
@@ -9,9 +8,9 @@ interface IPrams {
 
 const Product = ({ params } : { params: IPrams}) => {
        console.log("params", params);
-    return <div>
+    return <div className="p-8">
         <Container>
-            <ProductDetails product={product} />
+       <div>Product Page </div>
         </Container>
          </div>;
 }
