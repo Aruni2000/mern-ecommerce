@@ -1,217 +1,40 @@
-export const product = [
-    {
-        id: "ahddcbdwe2133",
-        name: "Cardamom (8mm Large in size)",
-        description: "",
-        price: 40,
-        category: "spices",
-        weight: "100gm",
-        inStock: true,
-        images: [
-          {
-              color: "gary",
-              colorCode: "#808080",
-              image:
-                "https://www.keralaspicesonline.com/wp-content/uploads/2023/10/DSC06551-jpg.webp",
-            },
-        ],
-        reviews: [
-          {
-              id: "uwbdwcscwdKQWD21213",
-              userId: "21w2343rfgrghty",
-              productId: "bdwfbw", // Corrected productId
-              rating: 4,
-              comment: "Quality as expected and promised. Quick and hassle-free delivery. I think this is what we all expect. Thank you so much.",
-              createDate: "2024-02-26T15:53:44.483Z", // Corrected createDate
-              user: {
-                  id: "dvhwcdcjhwvdhjc",
-                  name: "3234r4t4grht",
-                  email: "nethminiaruni@gmail.com",
-                  emailVerified: null,
-                  image: "", // Corrected image
-                  hashedPassword: null,
-                  createdAt: "2024-02-26T15:40:52.558Z", // Corrected createdAt
-                  updatedAt: "2024-02-26T15:40:52.558Z", // Corrected updatedAt
-                  role: "USER"
-              }
-          }
-        ]
-    },
-    {
-      id: "ahbdwcscsce2133",
-      name: "Black Cardamom",
-      description: "It is a traditional Indian spice used in every household of India for infusing a smoky flavor to food items.",
-      price: 22,
+export const product = {
+    
+        id: "64a4ebe300900d44bb50628a",
+      name: "Black Pepper Bold 500 gm",
+      description:
+        "This black pepper is from the Idukki district of Kerala. The places in the Idukki district are famous for black pepper production. Idukki black pepper has higher quality, in terms of oil content, spiciness, and high litter weight.",
+      price: 102.99,
       category: "spices",
-      weight: "100gm",
       inStock: true,
       images: [
-          {
-              image: "https://www.keralaspicesonline.com/wp-content/uploads/2021/03/DSC06956-jpg.webp"
-          }
+        {
+          color: "Black",
+          colorCode: "#000000",
+          image:
+            "https://www.keralaspicesonline.com/wp-content/uploads/2023/10/DSC06578-jpg.webp",
+        },
       ],
       reviews: [
         {
-            id: "uwbsdscscwdcdvdwbwdb21213",
-            userId: "21w2343rty",
-            productId: "bdwfegbw", // Corrected productId
-            rating: 4,
-            comment: "good.",
-            createDate: "2024-02-26T15:53:44.483Z", // Corrected createDate
-            user: {
-                id: "dvhwjdchwvdhjc",
-                name: "3234r4t4grht",
-                email: "nethminiaruni@gmail.com",
-                emailVerified: null,
-                image: "", // Corrected image
-                hashedPassword: null,
-                createdAt: "2024-02-26T15:40:52.558Z", // Corrected createdAt
-                updatedAt: "2024-02-26T15:40:52.558Z", // Corrected updatedAt
-                role: "Admin"
-            },
-        },
-      ]
-  },
-    {
-        id: "ahbsdcscdwe2133",
-        name: "Cumin Seeds 250g",
-        description: "Cumin Seeds are the incredible flavorful spice that can be used in many heart-healthy, low-cholesterol recipes. It’s relatively easy to add to entrees, grains, and side dishes for a rich, flavorful dose of cumin.",
-        price: 55,
-        category: "spices",
-        weight: "",
-        inStock: true,
-        images: [
-            {
-                image: "https://www.keralaspicesonline.com/wp-content/uploads/2021/03/DSC06751-jpg.webp"
-            }
-        ],
-        reviews: [
-            {
-                id: "uwbsdscscwdcdvdwbwdbubwdKQWD21213",
-                userId: "21w2343rgrghty",
-                productId: "bdwfbw", // Corrected productId
-                rating: 4,
-                comment: "good.",
-                createDate: "2024-02-26T15:53:44.483Z", // Corrected createDate
-                user: {
-                    id: "dvhwjdwcwchwvdhjc",
-                    name: "3234r4t4grht",
-                    email: "nethminiaruni@gmail.com",
-                    emailVerified: null,
-                    image: "", // Corrected image
-                    hashedPassword: null,
-                    createdAt: "2024-02-26T15:40:52.558Z", // Corrected createdAt
-                    updatedAt: "2024-02-26T15:40:52.558Z", // Corrected updatedAt
-                    role: "Admin"
-                },
-            },
-        ],
-        
-    },
-    {
-        id: "ahbdwcscsce2133",
-        name: "Black Cardamom",
-        description: "It is a traditional Indian spice used in every household of India for infusing a smoky flavor to food items.",
-        price: 22,
-        category: "spices",
-        weight: "100gm",
-        inStock: true,
-        images: [
-            {
-                image: "https://www.keralaspicesonline.com/wp-content/uploads/2021/03/DSC06956-jpg.webp"
-            }
-        ],
-        reviews: [
-          {
-              id: "uwbsdscscwdcdvdwbwdb21213",
-              userId: "21w2343rty",
-              productId: "bdwfegbw", // Corrected productId
-              rating: 4,
-              comment: "good.",
-              createDate: "2024-02-26T15:53:44.483Z", // Corrected createDate
-              user: {
-                  id: "dvhwjdchwvdhjc",
-                  name: "3234r4t4grht",
-                  email: "nethminiaruni@gmail.com",
-                  emailVerified: null,
-                  image: "", // Corrected image
-                  hashedPassword: null,
-                  createdAt: "2024-02-26T15:40:52.558Z", // Corrected createdAt
-                  updatedAt: "2024-02-26T15:40:52.558Z", // Corrected updatedAt
-                  role: "Admin"
-              },
+          id: "64a65a6158b470c6e06959ee",
+          userId: "6475af156bad4917456e6e1e",
+          productId: "64a4ebe300900d44bb50628a",
+          rating: 5,
+          comment: "good",
+          createdDate: "2023-07-06T06:08:33.067Z",
+          user: {
+            id: "6475af156bad4917456e6e1e",
+            name: "Charles",
+            email: "example@gmail.com",
+            emailVerified: null,
+            image:
+              "https://lh3.googleusercontent.com/a/AAcHTteOiCtILLBWiAoolIW9PJH-r5825pBDl824_8LD=s96-c",
+            hashedPassword: null,
+            createdAt: "2023-05-30T08:08:53.979Z",
+            updatedAt: "2023-05-30T08:08:53.979Z",
+            role: "ADMIN",
           },
-        ]
-    },
-    {
-        id: "ahbdwe2cscscsccsc133",
-        name: "Ayurveda Homemade Soaps 65 GM",
-        description: "We have the flavors like Sandal, Turmeric, Jasmine, Alovera, Lime, Papaya,Cucumber, Lavender, and Tulasi. ",
-        price: 20,
-        category: "ayurveda",
-        weight: "100gm",
-        inStock: true,
-        images: [
-            {
-                image: "https://www.keralaspicesonline.com/wp-content/uploads/2018/11/DSC06541.jpg"
-            }
-        ],
-        reviews: [
-            {
-                id: "uwbdwbwdbsdcwwubwdKQWD21213",
-                userId: "21w2343rgrghty",
-                productId: "bdwfbw", // Corrected productId
-                rating: 4,
-                comment: "Turmeric soap is amazing.",
-                createDate: "2024-02-26T15:53:44.483Z", // Corrected createDate
-                user: {
-                    id: "dvhwjccwchwvdhjc",
-                    name: "3234r4t4grht",
-                    email: "nethminiaruni@gmail.com",
-                    emailVerified: null,
-                    image: "", // Corrected image
-                    hashedPassword: null,
-                    createdAt: "2024-02-26T15:40:52.558Z", // Corrected createdAt
-                    updatedAt: "2024-02-26T15:40:52.558Z", // Corrected updatedAt
-                    role: "Admin"
-                },
-            },
-        ]
-    },
-    {
-        id: "ahbdwcwcwce2133",
-        name: "Cloves 500g",
-        description: "Cloves are a popular spice that people use in soups, meats, sauces, and rice dishes. ",
-        price: 45,
-        category: "spices",
-        weight: "100gm",
-        inStock: true,
-        images: [
-            {
-                image: "https://www.keralaspicesonline.com/wp-content/uploads/2021/03/DSC06670-jpg.webp"
-            }
-        ],
-        reviews: [
-            {
-                id: "uwbdwbcwcwcdwdbubwdKQWD21213",
-                userId: "21w2343rgrghty",
-                productId: "bdwfbw", // Corrected productId
-                rating: 4,
-                comment: "good.",
-                createDate: "2024-02-26T15:53:44.483Z", // Corrected createDate
-                user: {
-                    id: "dvhwjhwcdfvfrbvdhjc",
-                    name: "3234r4t4grht",
-                    email: "nethminiaruni@gmail.com",
-                    emailVerified: null,
-                    image: "", // Corrected image
-                    hashedPassword: null,
-                    createdAt: "2024-02-26T15:40:52.558Z", // Corrected createdAt
-                    updatedAt: "2024-02-26T15:40:52.558Z", // Corrected updatedAt
-                    role: "Admin"
-                },
-            },
-        ]
-    },
-  ];
-  
+        },
+      ],
+    }
