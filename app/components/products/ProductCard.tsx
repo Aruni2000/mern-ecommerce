@@ -24,7 +24,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
     return (
         <div 
         onClick={() => router.push(`/product/${data.id}`)}
-        className="col-span-1 cursor-pointer border-[1px] border-slate-200 bg-slate-50 rounder-sm p-12 transition hover:scale-105 text-sm">
+        className="col-span-1 cursor-pointer border-[1px] text-slate-800 border-slate-200 bg-slate-50 rounder-sm p-12 transition hover:scale-105 text-sm">
             <div className="flex flex-col items-left w-full gap-1">
                 <div className="aspect-square overflow-hidden relative w-full">
                     <Image

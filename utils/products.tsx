@@ -46,7 +46,7 @@ export const products = [
           userId: "6475af156bad4917456e6e1e",
           productId: "64a4ebe300900d44bb50628a",
           rating: 5,
-          comment: "good",
+          comment: "Quality as expected and promised. Quick and hassle free delivery. I think this is what we all expect. Thank you so much.",
           createdDate: "2023-07-06T06:08:33.067Z",
           user: {
             id: "6475af156bad4917456e6e1e",
