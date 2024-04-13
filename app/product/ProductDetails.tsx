@@ -141,8 +141,7 @@ useEffect(() => {
                 />
                 <Horizontal />
                 <div className="max-w-[300px]">
-                    <Button 
-                    label="Add to Cart" onClick={() => handleAddProductToCart(cartProduct)} 
+                    <Button label="Add to Cart" onClick={() => handleAddProductToCart(cartProduct)} 
                     />
                 </div>
                 </>
