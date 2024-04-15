@@ -1,4 +1,5 @@
 import { CartProductType } from "@/app/product/ProductDetails";
+import { product } from "@/utils/product";
 import { createContext, use, useCallback, useContext, useEffect, useState } from "react";
 import {toast} from "react-hot-toast";
 
@@ -6,6 +7,7 @@ type CartContextType = {
     cartTotalQty: number;
     cartProducts: CartProductType[] | null;
     handleAddProductToCart: (product: CartProductType) => void;
+    handleRemoveProductFromCart: (product: CartProductType) => void;
 };
 
 export const CartContext = createContext<CartContextType | null>(null);
@@ -57,10 +59,27 @@ export const CartContextProviderComponent = ({ children }: Props) => {
         setCartTotalQty((prevQty) => prevQty + 1);
     }, []);
 
+    const handleRemoveProductFromCart = useCallback((
+        product: CartProductType
+    ) =>  {
+        if(cartProducts){
+            const fillteredProducts = cartProducts.filter((item) => {
+                return item.id !== product.id
+            })
+
+            setCartProducts(fillteredProducts)
+            toast.success("Product removed");
+            localStorage.setItem('eShopCartItems', JSON.stringify(fillteredProducts))
+
+        }
+
+    } , [cartProducts]) 
+
     const value = {
         cartTotalQty,
         cartProducts,
         handleAddProductToCart,
+        handleRemoveProductFromCart
     };
 
     return (
