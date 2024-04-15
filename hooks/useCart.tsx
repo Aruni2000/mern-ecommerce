@@ -24,7 +24,7 @@ export const CartContextProviderComponent = ({ children }: Props) => {
     useEffect(() => {
 
         const cartItems: any = localStorage.getItem('eShopCartItems')
-        const ctProducts: CartProductType[] | null = JSON.parse(cartItems)
+        const cartProducts: CartProductType[] | null = JSON.parse(cartItems)
         setCartProducts(cartProducts)
     }, [])
 
@@ -73,13 +73,15 @@ export const CartContextProviderComponent = ({ children }: Props) => {
 
         }
 
-    } , [cartProducts]) 
+    } , 
+    [cartProducts]);
 
     const value = {
         cartTotalQty,
         cartProducts,
         handleAddProductToCart,
-        handleRemoveProductFromCart
+        handleRemoveProductFromCart,
+        
     };
 
     return (
