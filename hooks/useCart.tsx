@@ -1,5 +1,4 @@
 import { CartProductType } from "@/app/product/ProductDetails";
-import { product } from "@/utils/product";
 import { createContext, use, useCallback, useContext, useEffect, useState } from "react";
 import {toast} from "react-hot-toast";
 
@@ -20,14 +19,44 @@ interface Props {
 // Renamed the component to avoid naming conflict
 export const CartContextProviderComponent = ({ children }: Props) => {
     const [cartTotalQty, setCartTotalQty] = useState(0);
+    const [cartTotalAmount, setCartTotalAmount] = useState(0)
     const [cartProducts, setCartProducts] = useState<CartProductType[] | null>(null);
+
+    console.log('qty', cartTotalQty)
+    console.log('amount',cartTotalAmount)
 
     useEffect(() => {
 
         const cartItems: any = localStorage.getItem('eShopCartItems')
         const cartProducts: CartProductType[] | null = JSON.parse(cartItems)
         setCartProducts(cartProducts)
-    }, [])
+    }, []);
+
+    useEffect (() => {
+        const getTotals = () => {
+            if(cartProducts) {
+                const {total, qty} = cartProducts?.reduce(
+                    (acc, item) => {
+                        const itemTotal = item.price*item.
+                        quantity;
+    
+                        acc.total += itemTotal;
+                        acc.qty += item.quantity;
+    
+                        return acc;
+                    },
+                    {
+                        total: 0,
+                        qty:0,
+                    }
+                );
+                 setCartTotalQty(qty)
+                 setCartTotalAmount(total)
+            }
+         
+        };
+        getTotals();
+    }, [cartProducts]);
 
     const handleAddProductToCart = useCallback((product: CartProductType) => {
         setCartProducts((prev) => {

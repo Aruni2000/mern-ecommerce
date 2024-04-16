@@ -3,7 +3,7 @@ export const products = [
         id: "64a654593e91b8e73a351e9b",
       name: "Cardamom ( 8mm Large in size)",
       description: "Cardamom is the queen of spices and cardamom 8mm is the larger in the cardamom category. This graded cardamom is specially graded in an 8mm filter. Most of them are handpicked after machine or filter grading.",
-      price: 2999,
+      price: 12,
       category: "spices",
       weight: "25g",
       inStock: true,
@@ -28,7 +28,7 @@ export const products = [
       name: "Black Pepper Bold 500 gm",
       description:
         "This black pepper is from the Idukki district of Kerala. The places in the Idukki district are famous for black pepper production. Idukki black pepper has higher quality, in terms of oil content, spiciness, and high litter weight.",
-      price: 102.99,
+      price: 24,
       category: "spices",
       weight: "25g",
       inStock: true,
@@ -68,7 +68,7 @@ export const products = [
       name: "Cumin Seeds 250g",
       description:
         'Cumin Seeds are the incredible flavorful spice that can be used in many heart-healthy, low-cholesterol recipes. It’s relatively easy to add to entrees, grains, and side dishes for a rich, flavorful dose of cumin.',
-      price: 40,
+      price: 14,
       category: "spices",
       weight: "25g",
       inStock: true,
@@ -135,7 +135,7 @@ export const products = [
       name: "Black Cardamom",
       description:
         "It is a traditional Indian spice used in every household of India for infusing a smoky flavor to food items.It helps to maintaining good heart health as well",
-      price: 70,
+      price: 34,
       category: "spices",
       weight: "25g",
       inStock: true,
@@ -154,7 +154,7 @@ export const products = [
       name: 'Cloves 500g',
       description:
         'Cloves are a popular spice that people use in soups, meats, sauces, and rice dishes. Studies show that cloves promote oral health, thanks to their antimicrobial properties, which may help kill harmful bacteria. You can easily incorporate ground cloves into many dishes. They’ll bring a warm, distinctive flavor to desserts, curries or chutneys.',
-      price: 50,
+      price: 48,
       category: "spices",
       inStock: true,
       images: [
