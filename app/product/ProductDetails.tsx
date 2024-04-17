@@ -3,13 +3,13 @@
 import Button from "@/app/components/Button";
 import SetQuanity from "@/app/components/products/SetQuanity";
 import { Rating } from "@mui/material";
-import exp from "constants";
 import { useCallback, useEffect, useState } from "react";
 import SetColor from "@/app/components/products/SetColor";
 import ProductImage from "../components/products/ProductImage";
 import { useCart } from "@/hooks/useCart";
 import { MdCheckCircle } from "react-icons/md";
 import { useRouter } from "next/navigation";
+
 interface ProductDetailsProps {
     product: any;
 }
@@ -54,9 +54,7 @@ useEffect(() => {
     setIsProductInCart(false);
 
     if (cartProducts) {
-        const existingIndex = cartProducts.findIndex(
-            (item) => item.id === product.id
-        );
+        const existingIndex = cartProducts.findIndex((item) => item.id === product.id);
         if (existingIndex > -1) {
             setIsProductInCart(true);
         }
