@@ -1,10 +1,13 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
-import NavBar from './components/nav/NavBar'
-import Footer from './components/footer/footer'
-import CartProvider from '@/providers/CartProvider'
-import { Toaster } from 'react-hot-toast'
+import './globals.css';
+import type { Metadata } from 'next';
+import { Poppins } from 'next/font/google';
+import NavBar from './components/nav/NavBar';
+import Footer from './components/footer/Footer';
+import CartProvider from '@/providers/CartProvider';
+import { Toaster } from 'react-hot-toast';
+
+
+
 
 const poppins = Poppins({ subsets: ['latin'], weight:['500','700'] })
 
@@ -16,8 +19,10 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
+
 }) {
+
   return (
     <html lang="en">
       <body className={`${poppins.className}

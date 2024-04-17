@@ -7,8 +7,14 @@ import Link from "next/link";
 import MenuItem from "./MenuItem";
 import { signOut } from "next-auth/react";
 import BackDrop from "./BackDrop";
+import { User } from "@prisma/client";
+import { SafeUser } from "./types";
 
-const UserMenu= () => {
+interface UserMenuProps {
+    currentUser: SafeUser | null;
+}
+
+const UserMenu: React.FC<UserMenuProps>= ({currentUser}) => {
     const [isOpen, setIsOpen] = useState(false);
     const toggleOpen = useCallback(() => {
         setIsOpen((prev) => !prev);
@@ -49,27 +55,29 @@ const UserMenu= () => {
             flex
             flex-col
             cursor-pointer">
-                <div>
+                {currentUser ?  <div>
                     <Link href="/orders">
                         <MenuItem onClick={toggleOpen}>Your Orders</MenuItem>
                     </Link>
                     <Link href="/admin">
                         <MenuItem onClick={toggleOpen}>Admin Dashboard</MenuItem>
+                        <hr/>
                     </Link>
                         <MenuItem 
                         onClick={() => {
                             toggleOpen();
                             signOut();
                         }}>Logout</MenuItem>
-                </div>
-                <div>
+                </div> : <div>
                 <Link href="/login">
                         <MenuItem onClick={toggleOpen}>Login</MenuItem>
                     </Link>
                     <Link href="/register">
                         <MenuItem onClick={toggleOpen}>Register</MenuItem>
                     </Link> 
-                </div>
+                </div>}
+               
+                
             </div>
         )}
     </div>

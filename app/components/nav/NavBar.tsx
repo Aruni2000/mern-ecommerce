@@ -2,9 +2,13 @@ import Link from "next/link";
 import Container  from "../Container";
 import CartCount from "./CartCount";
 import UserMenu from "./UserMenu";
+import { getCurrentUser } from "@/actions/getCurrentUser";
 
 
-const NavBar = () => {
+const NavBar = async() => {
+  
+  const currentUser = await getCurrentUser();
+  
     return (
     <div
     className="
@@ -34,7 +38,7 @@ const NavBar = () => {
                 <div className="hidden md:block">Search</div>
                 <div className="flex items-center gap-8 md:gap-12">
                     <CartCount/>
-                    <UserMenu/>
+                    <UserMenu currentUser= {currentUser} />
                 </div>
               </div>
             </Container>
