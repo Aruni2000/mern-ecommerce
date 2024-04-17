@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Container  from "../Container";
 import CartCount from "./CartCount";
+import UserMenu from "./UserMenu";
 
 
 const NavBar = () => {
@@ -33,7 +34,7 @@ const NavBar = () => {
                 <div className="hidden md:block">Search</div>
                 <div className="flex items-center gap-8 md:gap-12">
                     <CartCount/>
-                    <div>UserMenu</div>
+                    <UserMenu/>
                 </div>
               </div>
             </Container>
